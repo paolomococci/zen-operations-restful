@@ -1,7 +1,7 @@
 buildscript {
 	ext {
-		kotlinVersion = '1.3.21'
-		springBootVersion = '2.1.2.RELEASE'
+		kotlinVersion = '1.3.31'
+		springBootVersion = '2.1.5.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -34,8 +34,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'io.springfox:springfox-swagger2:2.9.2'
 	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
-	implementation 'org.ojalgo:ojalgo:47.0.0'
-	implementation 'org.ojalgo:ojalgo-commons-math3:2.47.2'
+	implementation 'org.ojalgo:ojalgo:47.2.0'
+	implementation 'org.ojalgo:ojalgo-commons-math3:2.47.3'
 	implementation 'org.ojalgo:ojalgo-joptimizer:2.47.2'
 	implementation 'org.ojalgo:okalgo:0.0.2'
 	implementation 'org.ujmp:ujmp-ojalgo:0.3.0'
