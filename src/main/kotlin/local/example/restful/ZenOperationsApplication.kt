@@ -16,7 +16,7 @@
  *
  */
 
-package local.example.restful
+package local.example.zen
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
