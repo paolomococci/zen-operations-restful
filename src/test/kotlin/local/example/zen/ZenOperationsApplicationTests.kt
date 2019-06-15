@@ -16,7 +16,7 @@
  *
  */
 
-package local.example.restful
+package local.example.zen
 
 import org.junit.Test
 import org.junit.runner.RunWith
