@@ -3,4 +3,4 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = "zen-operations-restful"
+rootProject.name = "ZenOperationsOR"
