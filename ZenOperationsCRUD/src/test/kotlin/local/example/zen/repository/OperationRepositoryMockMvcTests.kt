@@ -69,6 +69,20 @@ class OperationRepositoryMockMvcTests {
 
     @Test
     @Throws(Exception::class)
+    fun `partial update test`() {
+        val mvcResult = mockMvc!!.perform(post("/operations").content(sample))
+                .andExpect(status().isCreated)
+                .andReturn()
+        val result = mvcResult.response.getHeader("Location")
+        mockMvc.perform(patch(result!!).content("{\"name\":\"diet problem\"}"))
+                .andExpect(status().isNoContent)
+        mockMvc.perform(get(result))
+                .andExpect(status().isOk)
+                .andExpect(jsonPath("$.name").value("diet problem"))
+    }
+
+    @Test
+    @Throws(Exception::class)
     fun `delete test`() {
         val mvcResult = mockMvc!!.perform(post("/operations").content(sample))
                 .andExpect(status().isCreated).andReturn()
