@@ -23,9 +23,9 @@ import javax.persistence.*
 @Entity
 @Table(name = "operations")
 data class Operation(
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        val id: Long,
-        @Column(nullable = true)
-        var name: String? = null
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long,
+    @Column(nullable = true)
+    var name: String? = null
 )
