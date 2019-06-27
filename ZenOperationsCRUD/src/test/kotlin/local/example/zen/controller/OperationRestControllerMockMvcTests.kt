@@ -41,6 +41,15 @@ class OperationRestControllerMockMvcTests {
 
     private val sample: String = "{\"name\":\"sample operation\"}"
 
+    @Test
+    @Throws(Exception::class)
+    fun `existence test`() {
+        mockMvc!!.perform(get("/api/operations"))
+                .andDo(print()).andExpect(status().isOk)
+                .andExpect(jsonPath("$._links.self.href")
+                        .value("http://localhost/api/operations"))
+    }
+
 
     @Test
     @Throws(Exception::class)
