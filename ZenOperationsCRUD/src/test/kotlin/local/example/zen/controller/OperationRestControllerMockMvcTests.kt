@@ -27,8 +27,8 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers.print
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.*
 
 @RunWith(SpringRunner::class)
@@ -50,7 +50,6 @@ class OperationRestControllerMockMvcTests {
                         .value("http://localhost/api/operations"))
     }
 
-
     @Test
     @Throws(Exception::class)
     fun `create test`() {
@@ -69,5 +68,30 @@ class OperationRestControllerMockMvcTests {
         val result = mvcResult.response.getHeader("Location")
         mockMvc.perform(get(result!!)).andExpect(status().isOk)
                 .andExpect(jsonPath("$.name").value("sample operation"))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun `update test`() {
+        val mvcResult = mockMvc!!.perform(post("/api/operations")
+                .content(sample).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated).andReturn()
+        val result = mvcResult.response.getHeader("Location")
+        mockMvc.perform(put(result!!)
+                .content("{\"name\":\"Diet Problem\"}")
+                .contentType(MediaType.APPLICATION_JSON)).andExpect(status().isCreated)
+        mockMvc.perform(get(result)).andExpect(status().isOk)
+                .andExpect(jsonPath("$.name").value("Diet Problem"))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun `delete test`() {
+        val mvcResult = mockMvc!!.perform(post("/api/operations")
+                .content(sample).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated).andReturn()
+        val result = mvcResult.response.getHeader("Location")
+        mockMvc.perform(delete(result!!)).andExpect(status().isNoContent)
+        mockMvc.perform(get(result)).andExpect(status().isNotFound)
     }
 }
