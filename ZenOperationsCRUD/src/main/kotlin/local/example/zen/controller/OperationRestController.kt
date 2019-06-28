@@ -62,4 +62,25 @@ class OperationRestController(
         ).toList()
         return Resources(operations, linkTo(methodOn(OperationRestController::class.java).readAll()).withSelfRel())
     }
+
+    @PutMapping("/{id}")
+    @Throws(URISyntaxException::class)
+    internal fun update(@RequestBody update: Operation, @PathVariable id: Long?): ResponseEntity<*> {
+        val updated = operationRepository.findById(id!!)
+                .map { temp ->
+                    if (!update.name.isNullOrBlank()) temp.name = update.name
+                    operationRepository.save(temp)
+                }.orElseGet {
+                    operationRepository.save(update)
+                }
+        val resource = operationResourceAssembler.toResource(updated)
+        return ResponseEntity.created(URI(resource.id.expand().href)).body(resource)
+    }
+
+    @DeleteMapping("/{id}")
+    @Throws(URISyntaxException::class)
+    internal fun delete(@PathVariable id: Long?): ResponseEntity<*> {
+        if (id != null) operationRepository.deleteById(id)
+        return ResponseEntity.noContent().build<Any>()
+    }
 }
