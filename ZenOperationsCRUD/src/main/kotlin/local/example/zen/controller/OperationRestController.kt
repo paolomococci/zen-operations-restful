@@ -68,7 +68,7 @@ class OperationRestController(
     internal fun update(@RequestBody update: Operation, @PathVariable id: Long?): ResponseEntity<*> {
         val updated = operationRepository.findById(id!!)
                 .map { temp ->
-                    if (!update.name.isNullOrBlank()) temp.name = update.name
+                    temp.name = update.name
                     operationRepository.save(temp)
                 }.orElseGet {
                     operationRepository.save(update)
