@@ -245,3 +245,121 @@ Date: Sat, 29 Jun 2019 10:29:25 GMT
 }
 ```
 
+## Yet again
+
+```
+$ curl -v -i -H "Content-Type:application/json" -d "{\"name\":\"Diet Problem\"}" http://127.0.0.1:9091/api/operations
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 9091 (#0)
+> POST /api/operations HTTP/1.1
+> Host: 127.0.0.1:9091
+> User-Agent: curl/7.64.0
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 23
+> 
+* upload completely sent off: 23 out of 23 bytes
+< HTTP/1.1 201 
+HTTP/1.1 201 
+< Location: http://127.0.0.1:9091/api/operations/1
+Location: http://127.0.0.1:9091/api/operations/1
+< Content-Type: application/hal+json;charset=UTF-8
+Content-Type: application/hal+json;charset=UTF-8
+< Transfer-Encoding: chunked
+Transfer-Encoding: chunked
+< Date: Sat, 29 Jun 2019 11:11:32 GMT
+Date: Sat, 29 Jun 2019 11:11:32 GMT
+
+< 
+{
+  "name" : "Diet Problem",
+  "_links" : {
+    "self" : {
+      "href" : "http://127.0.0.1:9091/api/operations/1"
+    },
+    "operations" : {
+      "href" : "http://127.0.0.1:9091/api/operations/1"
+    }
+  }
+* Connection #0 to host 127.0.0.1 left intact
+}
+```
+
+```
+$ curl -v -i -X PUT -H "Content-Type:application/json" -d "{}" http://127.0.0.1:9091/api/operations/1
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 9091 (#0)
+> PUT /api/operations/1 HTTP/1.1
+> Host: 127.0.0.1:9091
+> User-Agent: curl/7.64.0
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 2
+> 
+* upload completely sent off: 2 out of 2 bytes
+< HTTP/1.1 201 
+HTTP/1.1 201 
+< Location: http://127.0.0.1:9091/api/operations/1
+Location: http://127.0.0.1:9091/api/operations/1
+< Content-Type: application/hal+json;charset=UTF-8
+Content-Type: application/hal+json;charset=UTF-8
+< Transfer-Encoding: chunked
+Transfer-Encoding: chunked
+< Date: Sat, 29 Jun 2019 11:11:51 GMT
+Date: Sat, 29 Jun 2019 11:11:51 GMT
+
+< 
+{
+  "name" : null,
+  "_links" : {
+    "self" : {
+      "href" : "http://127.0.0.1:9091/api/operations/1"
+    },
+    "operations" : {
+      "href" : "http://127.0.0.1:9091/api/operations/1"
+    }
+  }
+* Connection #0 to host 127.0.0.1 left intact
+}
+```
+
+```
+$ curl -v -i -X PUT -H "Content-Type:application/json" -d "{\"name\":\"\"}" http://127.0.0.1:9091/api/operations/1
+*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to 127.0.0.1 (127.0.0.1) port 9091 (#0)
+> PUT /api/operations/1 HTTP/1.1
+> Host: 127.0.0.1:9091
+> User-Agent: curl/7.64.0
+> Accept: */*
+> Content-Type:application/json
+> Content-Length: 11
+> 
+* upload completely sent off: 11 out of 11 bytes
+< HTTP/1.1 201 
+HTTP/1.1 201 
+< Location: http://127.0.0.1:9091/api/operations/1
+Location: http://127.0.0.1:9091/api/operations/1
+< Content-Type: application/hal+json;charset=UTF-8
+Content-Type: application/hal+json;charset=UTF-8
+< Transfer-Encoding: chunked
+Transfer-Encoding: chunked
+< Date: Sat, 29 Jun 2019 11:12:45 GMT
+Date: Sat, 29 Jun 2019 11:12:45 GMT
+
+< 
+{
+  "name" : "",
+  "_links" : {
+    "self" : {
+      "href" : "http://127.0.0.1:9091/api/operations/1"
+    },
+    "operations" : {
+      "href" : "http://127.0.0.1:9091/api/operations/1"
+    }
+  }
+* Connection #0 to host 127.0.0.1 left intact
+}
+```
