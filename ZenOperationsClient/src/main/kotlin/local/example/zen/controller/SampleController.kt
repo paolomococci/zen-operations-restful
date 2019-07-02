@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RequestParam
 class SampleController {
 
     @GetMapping(value = ["/sample"])
-    fun greeting(@RequestParam(
+    fun sample(@RequestParam(
             name = "name",
             required = false,
             defaultValue = "everyone") name: String, model: Model): String {
