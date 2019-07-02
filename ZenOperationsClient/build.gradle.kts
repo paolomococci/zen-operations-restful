@@ -24,6 +24,14 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("org.webjars:angularjs:1.7.7")
+	implementation("org.webjars:bootstrap:4.3.1")
+	implementation("org.webjars:jquery:3.4.1")
+	implementation("org.webjars:popper.js:1.15.0")
+	implementation("org.webjars:font-awesome:5.9.0")
+	implementation("org.webjars.npm:feather-icons:4.22.1")
+	implementation("org.webjars:chartjs:26962ce-1")
+	implementation("org.webjars:d3js:5.9.1")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
