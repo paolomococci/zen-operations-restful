@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.1.6.RELEASE"
 	id("io.spring.dependency-management") version "1.0.7.RELEASE"
-	kotlin("jvm") version "1.3.40"
-	kotlin("plugin.spring") version "1.3.40"
+	kotlin("jvm") version "1.3.41"
+	kotlin("plugin.spring") version "1.3.41"
 }
 
 group = "local.example"
@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("com.jayway.jsonpath:json-path:2.4.0")
 	implementation("org.webjars:angularjs:1.7.7")
 	implementation("org.webjars:bootstrap:4.3.1")
 	implementation("org.webjars:jquery:3.4.1")
