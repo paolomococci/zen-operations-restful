@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="description" content=""/>
-    <meta name="author" content="Paolo Mococci"/>
-    <title>Zen Operations Client - Index</title>
+    <meta content="ie=edge" http-equiv="x-ua-compatible"/>
+    <meta content="" name="description"/>
+    <meta content="Paolo Mococci" name="author"/>
+    <title>Zen Operations Client - Sample</title>
     <link href="/webjars/font-awesome/5.8.2/css/all.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="/css/style.css" media="all" rel="stylesheet" type="text/css"/>
@@ -14,7 +14,7 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">Zen Operations</a>
+        <a class="navbar-brand" href="/">Zen Operations</a>
         <button aria-controls="navbarsZenOperations" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler" data-target="#navbarsZenOperations" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
@@ -22,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarsZenOperations">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Index <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Index</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/sample">Sample</a>
+                    <a class="nav-link" href="#">Sample <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a aria-disabled="true" class="nav-link disabled" href="#" tabindex="-1">Operations Research</a>
@@ -41,7 +41,7 @@
                        href="#" id="dropdown01">CRUD</a>
                     <div aria-labelledby="dropdown01" class="dropdown-menu">
                         <a class="dropdown-item" href="#">Create</a>
-                        <a class="dropdown-item" href="#">Read</a>
+                        <a class="dropdown-item" href="/operation-read">Read</a>
                         <a class="dropdown-item" href="#">Update</a>
                         <a class="dropdown-item" href="#">Partial update</a>
                         <a class="dropdown-item" href="#">Delete</a>
@@ -58,10 +58,8 @@
 <main class="container" role="main">
 
     <div class="starter-template text-center py-5 px-3">
-        <h1>Zen Operations Client - Index page</h1>
-        <p class="lead">
-            Web Application Todo
-        </p>
+        <h1>Zen Operations Client - Sample page</h1>
+        <p class="lead" th:text="'Hi, ' + ${name} + '!'" />
     </div>
 
 </main>
