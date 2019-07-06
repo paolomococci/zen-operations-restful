@@ -18,7 +18,12 @@
 
 package local.example.zen.model
 
+import lombok.Data
+import lombok.NoArgsConstructor
+
+@Data
+@NoArgsConstructor
 data class Operation (
-        val id: Long,
-        val name: String
+        private val id: Long? = null,
+        private val name: String? = null
 )
