@@ -25,7 +25,7 @@ dependencies {
     implementation("org.webjars:jquery:3.6.0")
     implementation("org.webjars:popper.js:2.9.3")
     implementation("org.webjars:font-awesome:5.15.4")
-    implementation("org.webjars.npm:feather-icons:4.22.1")
+    implementation("org.webjars.npm:feather-icons:4.28.0")
     implementation("org.webjars:chartjs:26962ce-1")
     implementation("org.webjars:d3js:5.9.1")
     implementation("org.springframework.boot:spring-boot-starter-web")
