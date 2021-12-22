@@ -23,7 +23,7 @@ dependencies {
     implementation("org.webjars:angularjs:2.0.0-alpha.22")
     implementation("org.webjars:bootstrap:5.1.3")
     implementation("org.webjars:jquery:3.6.0")
-    implementation("org.webjars:popper.js:1.15.0")
+    implementation("org.webjars:popper.js:2.9.3")
     implementation("org.webjars:font-awesome:5.9.0")
     implementation("org.webjars.npm:feather-icons:4.22.1")
     implementation("org.webjars:chartjs:26962ce-1")
