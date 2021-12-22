@@ -21,7 +21,7 @@ dependencies {
 	implementation("io.springfox:springfox-swagger-ui:3.0.0")
 	implementation("org.ojalgo:ojalgo:49.2.1")
 	implementation("org.ojalgo:ojalgo-commons-math3:3.1.0")
-	implementation("org.ojalgo:ojalgo-joptimizer:2.47.2")
+	implementation("org.ojalgo:ojalgo-joptimizer:3.0.0")
 	implementation("org.ojalgo:okalgo:0.0.2")
 	implementation("org.ujmp:ujmp-ojalgo:0.3.0")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
