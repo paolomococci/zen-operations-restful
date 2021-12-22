@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("io.springfox:springfox-swagger2:2.9.2")
+	implementation("io.springfox:springfox-swagger2:3.0.0")
 	implementation("io.springfox:springfox-swagger-ui:2.9.2")
 	implementation("org.ojalgo:ojalgo:47.2.0")
 	implementation("org.ojalgo:ojalgo-commons-math3:2.47.3")
