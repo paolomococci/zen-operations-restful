@@ -20,7 +20,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-hateoas")
     implementation("com.jayway.jsonpath:json-path:2.6.0")
-    implementation("org.webjars:angularjs:1.7.7")
+    implementation("org.webjars:angularjs:2.0.0-alpha.22")
     implementation("org.webjars:bootstrap:4.3.1")
     implementation("org.webjars:jquery:3.4.1")
     implementation("org.webjars:popper.js:1.15.0")
