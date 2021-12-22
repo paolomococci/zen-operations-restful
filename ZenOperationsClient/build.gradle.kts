@@ -19,7 +19,7 @@ dependencies {
     implementation("org.projectlombok:lombok:1.18.22")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-hateoas")
-    implementation("com.jayway.jsonpath:json-path:2.4.0")
+    implementation("com.jayway.jsonpath:json-path:2.6.0")
     implementation("org.webjars:angularjs:1.7.7")
     implementation("org.webjars:bootstrap:4.3.1")
     implementation("org.webjars:jquery:3.4.1")
