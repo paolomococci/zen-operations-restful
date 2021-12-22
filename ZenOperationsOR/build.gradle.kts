@@ -19,7 +19,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("io.springfox:springfox-swagger2:3.0.0")
 	implementation("io.springfox:springfox-swagger-ui:3.0.0")
-	implementation("org.ojalgo:ojalgo:47.2.0")
+	implementation("org.ojalgo:ojalgo:49.2.1")
 	implementation("org.ojalgo:ojalgo-commons-math3:2.47.3")
 	implementation("org.ojalgo:ojalgo-joptimizer:2.47.2")
 	implementation("org.ojalgo:okalgo:0.0.2")
