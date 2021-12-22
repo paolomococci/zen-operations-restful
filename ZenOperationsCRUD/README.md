@@ -2,7 +2,7 @@
 
 ## Sample GET request
 
-```
+```shell
 $ curl -v -i http://127.0.0.1:9091/api/operations
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -34,7 +34,7 @@ Date: Thu, 27 Jun 2019 15:18:12 GMT
 
 ## To create an item
 
-```
+```shell
 $ curl -v -i -H "Content-Type:application/json" -d "{\"name\":\"Diet Problem\"}" http://127.0.0.1:9091/api/operations
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -75,7 +75,7 @@ Date: Thu, 27 Jun 2019 15:20:10 GMT
 
 ## Again, create an item
 
-```
+```shell
 $ curl -v -i -H "Content-Type:application/json" -d "{\"name\":\"Diet Problem\"}" http://127.0.0.1:9091/api/operations
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -116,7 +116,7 @@ Date: Sat, 29 Jun 2019 10:21:45 GMT
 
 ## Retrieve this item by id
 
-```
+```shell
 $ curl -v -i http://127.0.0.1:9091/api/operations/1
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -152,7 +152,7 @@ Date: Sat, 29 Jun 2019 10:23:19 GMT
 
 ## Update by id
 
-```
+```shell
 $ curl -v -i -X PUT -H "Content-Type:application/json" -d "{\"name\":\"Schedule Problem\"}" http://127.0.0.1:9091/api/operations/1
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -193,7 +193,7 @@ Date: Sat, 29 Jun 2019 10:25:18 GMT
 
 ## Delete by id
 
-```
+```shell
 $ curl -v -i -X DELETE http://127.0.0.1:9091/api/operations/1
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -215,7 +215,7 @@ Date: Sat, 29 Jun 2019 10:29:14 GMT
 
 ## And verify
 
-```
+```shell
 $ curl -v -i http://127.0.0.1:9091/api/operations
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -247,7 +247,7 @@ Date: Sat, 29 Jun 2019 10:29:25 GMT
 
 ## Yet again
 
-```
+```shell
 $ curl -v -i -H "Content-Type:application/json" -d "{\"name\":\"Diet Problem\"}" http://127.0.0.1:9091/api/operations
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -286,7 +286,7 @@ Date: Sat, 29 Jun 2019 11:11:32 GMT
 }
 ```
 
-```
+```shell
 $ curl -v -i -X PUT -H "Content-Type:application/json" -d "{}" http://127.0.0.1:9091/api/operations/1
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
@@ -325,7 +325,7 @@ Date: Sat, 29 Jun 2019 11:11:51 GMT
 }
 ```
 
-```
+```shell
 $ curl -v -i -X PUT -H "Content-Type:application/json" -d "{\"name\":\"\"}" http://127.0.0.1:9091/api/operations/1
 *   Trying 127.0.0.1...
 * TCP_NODELAY set
